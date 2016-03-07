@@ -116,7 +116,7 @@ td {
     padding: 9px;
     text-transform: uppercase;
     margin-right: 9px;
-    width: 19px;
+    width: 50px;
     text-align: center;
     display: inline-block;
     color: rgb(146, 168, 209);
@@ -142,8 +142,8 @@ input {
 /* w3schoolsist voetud buttoni kujundus */
 .list-of-jars button {
   display: inline-block;
-  padding: 3px 6px;
-  font-size: 14px;
+  padding: 5px 8px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;

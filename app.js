@@ -214,38 +214,48 @@
        var span = document.createElement('span');
        span.className = 'letter';
 
-       var letter = document.createTextNode(this.sets);
+       var letter = document.createTextNode(this.sets + ' setti');
        span.appendChild(letter);
 
        li.appendChild(span);
 
        var btn = document.createElement("button");
-       var t = document.createTextNode("KUSTUTA");
+       var t = document.createTextNode("PEIDA");
        btn.appendChild(t);
 
        //proovin midagi
        var btn2 = document.createElement("button");
-       var t2 = document.createTextNode("-1");
+       var btn3 = document.createElement("button");
+       var t2 = document.createTextNode("-1 set");
+       var t3 = document.createTextNode("Märgi tehtuks");
        btn2.appendChild(t2);
+       btn3.appendChild(t3);
 
        var span_with_content = document.createElement('span');
        span_with_content.className = 'content';
 
-       var content = document.createTextNode(this.title + ' | ' + this.amount + ' x ' + this.sets);
+       var content = document.createTextNode(this.amount + ' x ' + this.title);
        span_with_content.appendChild(content);
 
        li.appendChild(span_with_content);
        li.appendChild(btn);
        li.appendChild(btn2);
+       li.appendChild(btn3);
 
        btn.onclick = function () {
          li.style.display = 'none';
        //this.parentElement.removeChild(this);
  };
-       btn2.onclick = function () {
+       btn2.onclick = function () {   //EI LEIDNUD ÕIGET LAHENDUST SELLELE!!
          this.sets = this.sets -1;
-         var content = document.createTextNode(this.title + ' | ' + this.amount + ' x ' + this.sets);
+         content.nodeValue=this.sets;
+         //var content = document.createTextNode(this.amount + ' x ' + this.title);
+         //span_with_content.appendChild(content);
         console.log("1 set maha");
+};
+        btn3.onclick = function () {
+          content.nodeValue="TEHTUD";
+
 };
 
        return li;
