@@ -246,7 +246,8 @@
          li.style.display = 'none';
        //this.parentElement.removeChild(this);
  };
-       btn2.onclick = function () {   //EI LEIDNUD ÕIGET LAHENDUST SELLELE!!
+ 
+       btn2.onclick = function () {   //EI LEIDNUD ÕIGET LAHENDUST SELLELE!!(et võtaks sets muutujast 1 maha ja näitaks muutust)
          this.sets = this.sets -1;
          content.nodeValue=this.sets;
          //var content = document.createTextNode(this.amount + ' x ' + this.title);
@@ -254,9 +255,17 @@
         console.log("1 set maha");
 };
         btn3.onclick = function () {
-          content.nodeValue="TEHTUD";
-
+        content.nodeValue="TEHTUD";
 };
+/*  SIIN KA MIDAGI KATKI
+        btn3.addEventListener('click', function() {
+        if (t3 == "Märgi tehtuks"){
+          t3.nodeValue="TEHTUD";
+        }else{
+          t3.nodeValue="TEGEMATA";
+        }
+        });
+*/
 
        return li;
 
