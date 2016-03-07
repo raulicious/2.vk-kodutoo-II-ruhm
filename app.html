@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treeningkava v0.1</title>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <nav class="menu">
+    <ul class="menu-list">
+      <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
+      <li class="menu-item"><a href="#list-view" class="menu-link list-view">Kava</a></li>
+      <li class="menu-item"><a href="#manage-view" class="menu-link manage-view">Harjutuste lisamine</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+
+    <div id="list-view">
+      <h1>Kava</h1>
+      <input type="search" placeholder="Otsing" id="search"><br>
+      <button class="deleteAll" onclick="window.localStorage.clear(); location.reload();">Kustuta kõik</button>
+      <ul class="list-of-jars"></ul>
+    </div>
+    <div id="manage-view">
+      <h1>Haldus</h1>
+
+      <label for="title">Harjutus: </label><br>
+      <input type="text" name="title" class="title"><br>
+
+      <label for="amount">Kogus: </label><br>
+      <input type="number" name="amount" class="amount" min="1" max="100"><br>
+
+      <label for="amount">Settide arv: </label><br>
+      <input type="number" name="sets" class="sets" min="1" max="5"><br>
+
+      <button class="add-new-jar pull-right">Lisa uus harjutus</button>
+
+
+    </div>
+
+    <div id="home-view">
+      <h1>Avaleht</h1>
+    </div>
+
+  </main>
+
+</body>
+</html>
